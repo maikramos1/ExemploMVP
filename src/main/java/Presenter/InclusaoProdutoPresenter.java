@@ -107,6 +107,7 @@ public class InclusaoProdutoPresenter {
         produtos.incluir(produto);
 
         JOptionPane.showMessageDialog(view, "Produto incluído com sucesso!");
+        limpaCampos();
     }
 
     private void cancelar() {
@@ -114,19 +115,30 @@ public class InclusaoProdutoPresenter {
     }
     
     private void exibePrecoVenda(){
+        view.getTxtPrecoVenda().setText(String.valueOf(calculaPrecoVenda()));
+    }
+    
+    private double calculaPrecoVenda(){
         try{
-            view.getTxtPrecoVenda().setText(String.valueOf(calculaPrecoVenda()));
+            if (view.getTxtPrecoCusto().getText().isEmpty()) return 0;
+            if (view.getTxtPercentualLucro().getText().isEmpty()) return 0;
+            double precoCusto = Double.parseDouble(view.getTxtPrecoCusto().getText());
+            double percentualLucro = Double.parseDouble(view.getTxtPercentualLucro().getText());
+            return precoCusto + (precoCusto * percentualLucro / 100);
+        }
+        catch(NumberFormatException nEx){
+            JOptionPane.showMessageDialog(null, "Digite números em Preço Custo e/ou Percentual Lucro");
         }
         catch(Exception ex){
             JOptionPane.showMessageDialog(null, ex.getMessage());
         }
+        return 0;
     }
     
-    private double calculaPrecoVenda(){
-        if (view.getTxtPrecoCusto().getText().isEmpty()) return 0;
-        if (view.getTxtPercentualLucro().getText().isEmpty()) return 0;
-        double precoCusto = Double.parseDouble(view.getTxtPrecoCusto().getText());
-        double percentualLucro = Double.parseDouble(view.getTxtPercentualLucro().getText());
-        return precoCusto + (precoCusto * percentualLucro / 100);
+    private void limpaCampos(){
+        view.getTxtNome().setText(null);
+        view.getTxtPrecoCusto().setText(null);
+        view.getTxtPercentualLucro().setText(null);
+        view.getTxtPrecoVenda().setText(null);
     }
 }
