@@ -2,11 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Presenter;
+package presenter;
 
-import Model.*;
-import ProdutoCollection.*;
-import View.*;
+import model.Produto;
+import produtoCollection.ProdutoCollection;
+import view.InclusaoProdutoView;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;

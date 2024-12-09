@@ -2,10 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package Main;
+package main;
 
-import Presenter.InclusaoProdutoPresenter;
-import ProdutoCollection.ProdutoCollection;
+import presenter.InclusaoProdutoPresenter;
+import produtoCollection.ProdutoCollection;
 
 /**
  *
