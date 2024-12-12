@@ -5,6 +5,7 @@
 package produtoCollection;
 
 import model.Produto;
+import observer.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -16,9 +17,11 @@ import java.util.Optional;
 public class ProdutoCollection {
 
     private List<Produto> produtos;
+    private List<ProdutoObserver> observadores;
 
     public ProdutoCollection() {
         produtos = new ArrayList<>();
+        observadores = new ArrayList<>();
     }
 
     public void incluir(Produto produto) {
@@ -26,6 +29,14 @@ public class ProdutoCollection {
             throw new IllegalArgumentException("Informe um produto válido");
         }
         produtos.add(produto);
+        notificar();
+    }
+    
+    public void remover(int indice) {
+        if (indice >= 0 && indice < produtos.size()) {
+            produtos.remove(indice);
+            notificar();
+        }
     }
 
     public List<Produto> getProdutos() {
@@ -40,5 +51,15 @@ public class ProdutoCollection {
             }
         }
         return optProduto.empty();
+    }
+    
+    public void addObserver(ProdutoObserver observer) {
+        observadores.add(observer);
+    }
+
+    private void notificar() {
+        for (ProdutoObserver observador : observadores) {
+            observador.atualizar();
+        }
     }
 }

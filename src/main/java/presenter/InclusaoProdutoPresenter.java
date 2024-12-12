@@ -40,7 +40,6 @@ public class InclusaoProdutoPresenter {
                 }
             }
         });
-
         
         view.getBtnCancelar().addActionListener(new ActionListener(){
             @Override

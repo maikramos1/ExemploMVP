@@ -4,7 +4,7 @@
 
 package main;
 
-import presenter.InclusaoProdutoPresenter;
+import presenter.*;
 import produtoCollection.ProdutoCollection;
 
 /**
@@ -15,6 +15,6 @@ public class Principal {
 
     public static void main(String[] args) {
         ProdutoCollection produtos = new ProdutoCollection();
-        new InclusaoProdutoPresenter(produtos);
+        new PrincipalPresenter(produtos);
     }
 }
