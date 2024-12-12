@@ -1,5 +1,10 @@
-C:\Users\maikr\OneDrive\Documentos\NetBeansProjects\ExemploMVP\src\main\java\Main\Principal.java
-C:\Users\maikr\OneDrive\Documentos\NetBeansProjects\ExemploMVP\src\main\java\Model\Produto.java
-C:\Users\maikr\OneDrive\Documentos\NetBeansProjects\ExemploMVP\src\main\java\Presenter\InclusaoProdutoPresenter.java
-C:\Users\maikr\OneDrive\Documentos\NetBeansProjects\ExemploMVP\src\main\java\ProdutoCollection\ProdutoCollection.java
-C:\Users\maikr\OneDrive\Documentos\NetBeansProjects\ExemploMVP\src\main\java\View\InclusaoProdutoView.java
+C:\Users\maikr\OneDrive\Documentos\NetBeansProjects\ExemploMVP\src\main\java\main\Principal.java
+C:\Users\maikr\OneDrive\Documentos\NetBeansProjects\ExemploMVP\src\main\java\model\Produto.java
+C:\Users\maikr\OneDrive\Documentos\NetBeansProjects\ExemploMVP\src\main\java\observer\ProdutoObserver.java
+C:\Users\maikr\OneDrive\Documentos\NetBeansProjects\ExemploMVP\src\main\java\presenter\InclusaoProdutoPresenter.java
+C:\Users\maikr\OneDrive\Documentos\NetBeansProjects\ExemploMVP\src\main\java\presenter\ListagemProdutoPresenter.java
+C:\Users\maikr\OneDrive\Documentos\NetBeansProjects\ExemploMVP\src\main\java\presenter\PrincipalPresenter.java
+C:\Users\maikr\OneDrive\Documentos\NetBeansProjects\ExemploMVP\src\main\java\produtoCollection\ProdutoCollection.java
+C:\Users\maikr\OneDrive\Documentos\NetBeansProjects\ExemploMVP\src\main\java\view\InclusaoProdutoView.java
+C:\Users\maikr\OneDrive\Documentos\NetBeansProjects\ExemploMVP\src\main\java\view\ListagemProdutoView.java
+C:\Users\maikr\OneDrive\Documentos\NetBeansProjects\ExemploMVP\src\main\java\view\PrincipalView.java

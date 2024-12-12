@@ -40,8 +40,8 @@ public class InclusaoProdutoView extends javax.swing.JFrame {
         btnCancelar = new javax.swing.JButton();
         btnIncluir = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Inclusão Produto");
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Inclusão de Produtos");
 
         lblNome.setText("Nome");
 
