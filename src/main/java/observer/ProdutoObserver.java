@@ -4,10 +4,13 @@
  */
 package observer;
 
+import java.util.List;
+import model.Produto;
+
 /**
  *
  * @author maikr
  */
 public interface ProdutoObserver {
-    public void atualizar();
+    public void atualizar(List<Produto> produtos);
 }

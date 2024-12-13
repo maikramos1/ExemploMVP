@@ -36,13 +36,13 @@ public class PrincipalPresenter implements ProdutoObserver{
     private void configuraView(){
         //exibição inicial
         atualizar(produtos.getProdutos());
-        principalview.getBtnIncluir().addActionListener(new ActionListener(){
+        principalview.getMnIncluir().addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
                 incluir();
             }
         });
-        principalview.getBtnListar().addActionListener(new ActionListener(){
+        principalview.getMnListar().addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
                 listar();

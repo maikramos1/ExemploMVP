@@ -4,8 +4,8 @@
  */
 package view;
 
-import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JMenuItem;
 import javax.swing.JProgressBar;
 
 /**
@@ -32,63 +32,63 @@ public class PrincipalView extends javax.swing.JFrame {
 
         lblTotalProdutosCadastrados = new javax.swing.JLabel();
         prTotalProdutosCadastrados = new javax.swing.JProgressBar();
-        btnIncluir = new javax.swing.JButton();
-        btnListar = new javax.swing.JButton();
+        mnbMenuBar = new javax.swing.JMenuBar();
+        mnProduto = new javax.swing.JMenu();
+        mnIncluir = new javax.swing.JMenuItem();
+        mnListar = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Janela Principal");
         setPreferredSize(new java.awt.Dimension(291, 240));
 
+        lblTotalProdutosCadastrados.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTotalProdutosCadastrados.setText("Total de produtos cadastrados: 00");
+        lblTotalProdutosCadastrados.setToolTipText("");
+        lblTotalProdutosCadastrados.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        btnIncluir.setText("Incluir");
+        prTotalProdutosCadastrados.setPreferredSize(new java.awt.Dimension(181, 4));
 
-        btnListar.setText("Listar");
+        mnProduto.setText("Produto");
+
+        mnIncluir.setText("Incluir");
+        mnProduto.add(mnIncluir);
+
+        mnListar.setText("Listar");
+        mnProduto.add(mnListar);
+
+        mnbMenuBar.add(mnProduto);
+
+        setJMenuBar(mnbMenuBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(prTotalProdutosCadastrados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(71, 71, 71))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnIncluir)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnListar))
-                    .addComponent(lblTotalProdutosCadastrados))
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(lblTotalProdutosCadastrados, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(prTotalProdutosCadastrados, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(lblTotalProdutosCadastrados)
+                .addContainerGap(191, Short.MAX_VALUE)
+                .addComponent(prTotalProdutosCadastrados, javax.swing.GroupLayout.PREFERRED_SIZE, 4, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(prTotalProdutosCadastrados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnIncluir)
-                    .addComponent(btnListar))
-                .addContainerGap(93, Short.MAX_VALUE))
+                .addComponent(lblTotalProdutosCadastrados))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-   
-
-    public JButton getBtnIncluir() {
-        return btnIncluir;
+    public JMenuItem getMnIncluir() {
+        return mnIncluir;
     }
 
-    public JButton getBtnListar() {
-        return btnListar;
+    public JMenuItem getMnListar() {
+        return mnListar;
     }
 
     public JLabel getLblTotalProdutosCadastrados() {
@@ -101,9 +101,11 @@ public class PrincipalView extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnIncluir;
-    private javax.swing.JButton btnListar;
     private javax.swing.JLabel lblTotalProdutosCadastrados;
+    private javax.swing.JMenuItem mnIncluir;
+    private javax.swing.JMenuItem mnListar;
+    private javax.swing.JMenu mnProduto;
+    private javax.swing.JMenuBar mnbMenuBar;
     private javax.swing.JProgressBar prTotalProdutosCadastrados;
     // End of variables declaration//GEN-END:variables
 }
