@@ -6,6 +6,7 @@ package presenter;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 import model.Produto;
 import observer.ProdutoObserver;
 import produtoCollection.ProdutoCollection;
@@ -33,7 +34,8 @@ public class PrincipalPresenter implements ProdutoObserver{
     }
     
     private void configuraView(){
-        atualizar();
+        //exibição inicial
+        atualizar(produtos.getProdutos());
         principalview.getBtnIncluir().addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
@@ -58,9 +60,9 @@ public class PrincipalPresenter implements ProdutoObserver{
     }
     
     @Override
-    public void atualizar(){
-        principalview.getLblTotalProdutosCadastrados().setText("Total de produtos cadastrados: " + produtos.getProdutos().size());
-        principalview.getPrTotalProdutosCadastrados().setValue(produtos.getProdutos().size());
+    public void atualizar(List<Produto> produtos){
+        principalview.getLblTotalProdutosCadastrados().setText("Total de produtos cadastrados: " + this.produtos.getTamanho());
+        principalview.getPrTotalProdutosCadastrados().setValue(this.produtos.getTamanho());
     }
     
 }

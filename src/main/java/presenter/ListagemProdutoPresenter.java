@@ -6,6 +6,8 @@ package presenter;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.event.ListSelectionEvent;
@@ -34,7 +36,8 @@ public class ListagemProdutoPresenter implements ProdutoObserver{
     }
     
     private void configuraView(){
-        atualizar();
+        //exibição inicial
+        atualizar(produtos.getProdutos());
         
         view.getTblListaProduto().getSelectionModel().addListSelectionListener(new ListSelectionListener(){
             @Override
@@ -66,11 +69,11 @@ public class ListagemProdutoPresenter implements ProdutoObserver{
     }
     
     @Override
-    public void atualizar(){
+    public void atualizar(List<Produto> produtos){
         //aprimorar o uso da JTable
         DefaultTableModel tabela = (DefaultTableModel) view.getTblListaProduto().getModel();
         tabela.setRowCount(0);
-        for (Produto produto : produtos.getProdutos()) {
+        for (Produto produto : produtos) {
             tabela.addRow(new Object[]{
                 produto.getNome(),
                 produto.getPrecoCusto(),

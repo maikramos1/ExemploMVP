@@ -7,6 +7,7 @@ package produtoCollection;
 import model.Produto;
 import observer.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -42,6 +43,10 @@ public class ProdutoCollection {
     public List<Produto> getProdutos() {
         return produtos;
     }
+    
+    public int getTamanho(){
+        return produtos.size();
+    }
 
     public Optional<Produto> findProdutoByNome(String nome) {
         Optional<Produto> optProduto = null;
@@ -59,7 +64,7 @@ public class ProdutoCollection {
 
     private void notificar() {
         for (ProdutoObserver observador : observadores) {
-            observador.atualizar();
+            observador.atualizar(Collections.unmodifiableList(produtos));
         }
     }
 }
